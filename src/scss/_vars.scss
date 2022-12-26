@@ -1,0 +1,25 @@
+:root {
+  // цвета
+  --color-eastbay: #484283;
+  --color-white: #fff;
+  --color-black: #000000;
+  --color-accent: #f14f4f;
+  --color-accent-hover: #cc4949;
+  --color-text: #444b58;
+  --color-text-hover: #31343c;
+  --color-border-sand: #dbbba9;
+  --color-second-bg: #fff4ee;
+
+  //отступы
+  --main-offset: 40px;
+  --second-offset: 20px;
+  --big-offset: 60px;
+
+  //шрифты
+  --font-family-regular: "Intro", sans-serif;
+  --font-family-book: "IntroBook", sans-serif;
+  --middle-high-font: 700 30px / 140% var(--font-family-regular);
+  --middle-font: 400 16px / 140% var(--font-family-regular);
+  --small-font: 400 14px / 140% var(--font-family-regular);
+
+}

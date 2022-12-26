@@ -1,0 +1,49 @@
+.hero {
+    height: 800px;
+    background-color: var(--color-eastbay);
+    height: 528px;
+    padding: 50px 0;
+    position: relative;
+
+    &__container {
+        position: relative;
+        z-index: 1;
+        height: 100%;
+        flex-direction: column;
+        justify-content: center;
+        align-items: flex-start;
+    }
+
+    &__bg-text {
+        position: absolute;
+        font: var(--middle-high-font);
+        color: var(--color-white);
+        font-size: 200px;
+        line-height: 200px;
+        margin-top: 40px;
+        margin-left: 50px;
+        opacity: 0.15;
+        top: 50%;
+        left: 50%;
+        transform: translate(-50%, -50%);
+        z-index: 0;
+    }
+
+    &__title {
+        margin: 0;
+        margin-top: 30px;
+        font: 400 36px / 140% var(--font-family-regular);
+        color: var(--color-white);
+        max-width: 50%;
+    }
+
+    &__description {
+        font: var(--middle-font);
+        font-family: var(--font-family-book);
+        color: var(--color-white);
+        max-width: calc(50% - 100px);
+        margin: 20px 0 40px 0;
+    }
+
+
+}

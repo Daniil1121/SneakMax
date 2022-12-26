@@ -1,0 +1,13 @@
+@mixin font-face($font-family, $url, $weight, $style) {
+    @font-face {
+        font-family: "#{$font-family}";
+        src: url('../fonts/#{$url}.woff2') format("woff2");
+        font-weight: #{$weight};
+        font-display: swap;
+        font-style: $style;
+    }
+}
+
+@include font-face("Intro", "../assets/fonts/IntroRegular", 400, normal);
+@include font-face("IntroBook", "../assets/fonts/IntroBook", 400, normal);
+@include font-face("Intro", "../assets/fonts/IntroBold", 700, normal);
