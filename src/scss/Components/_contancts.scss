@@ -1,0 +1,126 @@
+.contacts {
+    background-color: #F3F6F6;
+    padding: var(--big-offset) 0;
+
+    &__text {
+        &__title {
+            margin-bottom: var(--big-offset);
+        }
+
+        &__item {
+            font-style: normal;
+
+            &--subtitle {
+                margin: var(--main-offset) 0;
+                font-family: var(--font-family-book);
+                font-weight: normal;
+                font-size: 14px;
+                letter-spacing: 0.08em;
+                text-transform: uppercase;
+                color: #B2B5BB;
+
+                &--tooltip-container {
+                    background: var(--color-white);
+                    color: var(--color-black);
+                    font-weight: 900;
+                    width: 20px;
+                    height: 20px;
+                    cursor: help;
+                    font-size: 16px;
+                    position: relative;
+                    border-radius: 50%;
+                    display: inline-block;
+                    text-align: center;
+                    margin-left: 10px;
+                    box-shadow: 2px 4px 10px rgba(0, 13, 84, 0.2);
+
+                    &:hover>&--tooltip {
+                        opacity: 1;
+                        pointer-events: auto;
+                        -webkit-transform: translateY(0px);
+                        -moz-transform: translateY(0px);
+                        -ms-transform: translateY(0px);
+                        -o-transform: translateY(0px);
+                        transform: translateY(0px);
+
+                    }
+
+                    &--tooltip {
+                        text-align: left;
+                        width: 400px;
+                        text-transform: none;
+                        background: var(--color-white);
+                        bottom: calc(100% + 15px);
+                        left: -15px;
+                        color: var(--color-text);
+                        font: var(--font-family-book);
+                        font-weight: normal;
+                        font-size: 14px;
+                        display: block;
+                        opacity: 0;
+                        padding: 10px 20px;
+                        pointer-events: none;
+                        position: absolute;
+                        -webkit-transform: translateY(10px);
+                        -moz-transform: translateY(10px);
+                        -ms-transform: translateY(10px);
+                        -o-transform: translateY(10px);
+                        transform: translateY(10px);
+                        -webkit-transition: all .25s ease-out;
+                        -moz-transition: all .25s ease-out;
+                        -ms-transition: all .25s ease-out;
+                        -o-transition: all .25s ease-out;
+                        transition: all .25s ease-out;
+                        -webkit-box-shadow: 4px 8px 20px rgba(0, 13, 84, 0.2);
+                        -moz-box-shadow: 4px 8px 20px rgba(0, 13, 84, 0.2);
+                        -ms-box-shadow: 4px 8px 20px rgba(0, 13, 84, 0.2);
+                        -o-box-shadow: 4px 8px 20px rgba(0, 13, 84, 0.2);
+                        box-shadow: 4px 8px 20px rgba(0, 13, 84, 0.2);
+                        border-radius: 4px;
+
+                        &::after {
+
+                            border-left: solid transparent 10px;
+                            border-right: solid transparent 10px;
+                            border-top: solid var(--color-white) 10px;
+                            bottom: -10px;
+                            content: " ";
+                            height: 0;
+                            left: 15px;
+                            position: absolute;
+                            width: 0;
+
+                        }
+                    }
+
+
+                }
+            }
+
+            &--phone {
+                color: var(--color-text);
+                font-family: var(--font-family-regular);
+                font-size: 30px;
+            }
+
+            &--address {
+                margin-top: 10px;
+                color: var(--color-text);
+                font-family: var(--font-family-book);
+                font-size: 18px;
+                display: block;
+            }
+        }
+
+        &__socials {
+            margin-top: var(--main-offset);
+            display: flex;
+
+            &__item {
+                &:not(:first-child) {
+                    margin-left: var(--second-offset);
+                }
+            }
+        }
+    }
+}

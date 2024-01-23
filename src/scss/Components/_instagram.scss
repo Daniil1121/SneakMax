@@ -1,0 +1,36 @@
+.instagram {
+    margin-bottom: 200px;
+
+    &__left {
+        max-width: 380px;
+        background-color: var(--color-eastbay);
+        border-radius: 4px;
+
+        .question__form {
+            margin-top: 70px;
+            display: flex;
+            flex-direction: column;
+            padding: var(--main-offset) var(--second-offset);
+
+            &__title {
+                text-align: center;
+                color: var(--color-white);
+                margin: 0;
+                font: var(--middle-high-font);
+                margin-bottom: var(--second-offset);
+            }
+
+            &__descr {
+                margin: 0;
+                margin-bottom: var(--main-offset);
+                text-align: center;
+                color: var(--color-white);
+                font: var(--middle-font-book);
+            }
+
+            &__input {
+                margin-bottom: 10px;
+            }
+        }
+    }
+}

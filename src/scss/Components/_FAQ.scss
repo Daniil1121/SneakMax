@@ -1,0 +1,65 @@
+.faq {
+    padding: var(--big-offset) 0;
+
+    &__accordion__list {
+        width: 80%;
+        margin: auto;
+
+        &--item {
+            border-bottom: 1px solid var(--color-black);
+            border-top: 1px solid var(--color-black);
+            transition: all 0.3s;
+            height: min-content;
+            overflow: hidden;
+
+            &:not(:first-child) {
+                margin-top: -1px;
+            }
+
+            &-control {
+                padding: 25px 0;
+                width: 100%;
+                display: flex;
+                justify-content: space-between;
+
+                &-title {
+                    font-family: var(--font-family-regular);
+                    font-size: 20px;
+
+                }
+
+                &-icon {
+                    transform: rotate(0);
+                    transition: 0.3s;
+                    margin-right: 5px;
+
+
+                    &.close {
+                        transform: rotate(45deg);
+                    }
+                }
+
+            }
+
+            &-content {
+                display: block;
+                width: 100%;
+                text-align: left;
+                font-family: var(--font-family-book);
+                font-size: 16px;
+
+                transition: 0.3s;
+                margin: 0;
+                max-height: 0;
+                opacity: 0;
+
+                &.open {
+                    margin-bottom: var(--second-offset);
+                    max-height: none;
+                    opacity: 0.5;
+                }
+            }
+
+        }
+    }
+}

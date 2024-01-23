@@ -1,0 +1,68 @@
+.about {
+    background-color: var(--color-eastbay);
+
+    canvas {
+        position: absolute;
+    }
+
+    &__container {
+        position: relative;
+        display: flex;
+        flex-direction: row;
+        justify-content: flex-start;
+        align-items: center;
+    }
+
+    &__text {
+        max-width: 380px;
+        color: var(--color-white);
+        margin-right: 200px;
+        font: var(--middle-font-book);
+        position: relative;
+
+        &--title {
+            color: var(--color-white);
+            margin-bottom: var(--second-offset);
+        }
+
+        &--descr {
+            q {
+                font: inherit;
+                padding-bottom: var(--second-offset);
+                quotes: none
+            }
+
+            cite {
+                font: 700 20px / 20px 'Intro';
+                position: absolute;
+                bottom: -20px;
+                right: -50px;
+
+                &::before {
+                    content: '';
+                    position: absolute;
+                    width: 30px;
+                    height: 3px;
+                    background: var(--color-white);
+                    top: 11px;
+                    left: -50px;
+                }
+            }
+        }
+
+
+    }
+
+    &__image {
+        transform: skewX(-15deg);
+        overflow: hidden;
+        width: 490px;
+        height: 580px;
+
+        img {
+            height: 100%;
+            transform: skewX(15deg) scaleX(1.4) translateX(-10px);
+        }
+    }
+
+}

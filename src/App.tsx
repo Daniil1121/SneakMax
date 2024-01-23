@@ -3,7 +3,7 @@ import Catalog from "./Components/Catalog";
 import FAQ from "./Components/FAQ";
 import Contacts from "./Components/Contacts";
 import Footer from "./Components/Footer";
-import Quiz from "./Components/Quiz";
+import Quiz_slider from "./Components/Quiz_slider";
 import Team from "./Components/Team";
 import SocialNetwork from "./Components/SocialNetwork";
 import About from "./Components/About";
@@ -17,12 +17,11 @@ function App() {
         <Hero />
         <Catalog />
         <About />
-
-        {/* <Contacts />
-        <Quiz />
+        <Quiz_slider />
         <Team />
         <FAQ />
-        <SocialNetwork /> */}
+        <Contacts />
+        <SocialNetwork />
       </main>
       {/* <Footer /> */}
     </div>

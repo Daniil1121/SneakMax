@@ -1,0 +1,227 @@
+.quiz {
+    overflow: hidden;
+
+    &__container {
+        width: 400vw;
+        display: flex;
+        position: relative;
+        transition: transform 0.25s;
+
+        &.show-1-slide {
+            transform: translateX(0);
+        }
+
+        &.show-2-slide {
+            transform: translateX(-100vw);
+        }
+
+        &.show-3-slide {
+            transform: translateX(-200vw);
+        }
+
+        &.show-4-slide {
+            transform: translateX(-300vw);
+        }
+
+        .slide {
+            &__wrap {
+                width: 100vw;
+                margin-top: 60px;
+                margin-bottom: 60px;
+                position: relative;
+                left: -8px;
+            }
+
+
+
+            &__content {
+
+                position: relative;
+                padding: var(--main-offset) 100px;
+                height: 670px;
+                width: 1180px;
+                background-color: var(--color-second-bg);
+
+                &-header {
+                    padding-bottom: 10px;
+                    border-bottom: 1px solid #808080;
+
+                    &--title {
+                        margin-bottom: var(--second-offset);
+                    }
+
+                    &--descr {
+                        margin: 0;
+                        font: var(--font-family-book);
+                        color: #808080;
+                    }
+                }
+
+                &-question {
+                    &__title {
+                        font: 400 24px / 24px var(--font-family-book);
+                        color: var(--color-text);
+                        margin: var(--second-offset) 0;
+                    }
+
+                    &__answers-container {
+                        &.grid {
+                            display: grid;
+                            grid-template-columns: 1fr 1fr 1fr;
+                            grid-gap: 20px;
+                        }
+
+
+                        &__textarea {
+                            border: none;
+                            resize: none;
+                            font: var(--middle-font-book);
+                            padding: 15px
+                        }
+
+                        display: flex;
+                        justify-content: space-between;
+                        width: 100%;
+                        padding: 0;
+
+                        .question__answers__item {
+                            display: flex;
+                            flex-direction: column;
+
+                            img {
+                                object-fit: cover;
+                                max-height: 120px;
+                            }
+
+                            .custom-checkbox {
+                                margin: 10px 30px;
+                            }
+                        }
+                    }
+
+                    &__image-container {
+                        overflow: hidden;
+                        max-height: 280px;
+                        display: flex;
+                        justify-content: center;
+
+                        img {
+                            object-fit: cover;
+                        }
+                    }
+
+                    &--contacts-wrapper {
+                        position: relative;
+                        background-color: var(--color-border-sand);
+                        color: var(--color-white);
+                        padding: var(--main-offset);
+                        padding-right: 220px;
+                        margin-top: 25px;
+                        margin-right: 20px;
+                        border-radius: 4px;
+                        display: flex;
+                        flex-direction: column;
+
+                        &--svg-wrapper {
+                            svg {
+                                position: absolute;
+                                right: 0;
+                                top: 0;
+                                transform: translateX(20px) scale(1.05);
+
+                                &:nth-child(2) {
+                                    opacity: 0;
+                                    width: 210px;
+                                    height: 410px;
+                                    transform: translate(20px, 2px);
+                                    animation: show-success linear 0.2s forwards;
+
+                                    @keyframes show-success {
+                                        0% {
+                                            opacity: 0;
+                                        }
+
+                                        100% {
+                                            opacity: 1;
+                                        }
+                                    }
+                                }
+
+
+                            }
+
+                        }
+
+                        &-title {
+                            margin-bottom: 10px;
+                            color: var(--color-white);
+                            font-size: 36px;
+                        }
+
+                        &-descr {
+                            font: var(--middle-font-book);
+                            font-size: 18px;
+                            margin-bottom: 24px;
+                        }
+
+
+                        &-input {
+                            margin-bottom: 10px;
+                        }
+
+                        &-button {
+                            margin-top: 15px;
+                            background-color: var(--color-accent);
+                            color: var(--color-white);
+                            max-width: 250px;
+
+                            &:hover {
+                                background-color: var(--color-accent-hover);
+                            }
+                        }
+                    }
+                }
+
+                &-footer {
+                    position: absolute;
+                    bottom: 20px;
+                    display: flex;
+                    justify-content: space-between;
+                    padding-top: var(--second-offset);
+                    align-items: center;
+                    border-top: 1px solid #808080;
+                    width: calc(100% - 200px);
+
+                    &__counter {
+                        font: var(--middle-font-book);
+                        color: #808080;
+                    }
+
+                    &__buttons-group {
+                        width: 350px;
+
+                        .btn {
+                            border: 1px solid var(--color-text);
+                            padding: 10px 20px;
+
+                            &.prev {
+                                float: left;
+                            }
+
+                            &.next {
+                                float: right;
+                            }
+
+                            &:hover {
+                                background-color: var(--color-text);
+                                color: var(--color-white);
+                            }
+                        }
+                    }
+                }
+            }
+
+
+        }
+    }
+}

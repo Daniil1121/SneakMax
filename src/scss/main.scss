@@ -1,7 +1,13 @@
-@import url("./_setting.scss");
-@import url("./_vars.scss");
-@import url("./_fonts.scss");
+@import "./setting.scss";
+@import "./vars.scss";
+@import "./fonts.scss";
 
-@import url("./Components/_header.scss");
-@import url("./Components/_hero.scss");
-@import url("./Components/_catalog.scss");
+@import "./Components/header.scss";
+@import "./Components/hero.scss";
+@import "./Components/catalog.scss";
+@import "./Components/about.scss";
+@import "./Components/quiz.scss";
+@import "./Components/team.scss";
+@import "./Components/FAQ.scss";
+@import "./Components/contancts.scss";
+@import "./Components/instagram.scss";
